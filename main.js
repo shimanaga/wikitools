@@ -21,6 +21,15 @@ function isValidHexColor(hex) {
     return /^#([0-9A-F]{3}){1,2}$/i.test(hex);
 }
 
+function updateRGBFields(hex, rField, gField, bField) {
+    if (isValidHexColor(hex)) {
+        hex = expandShortHex(hex);
+        document.getElementById(rField).value = parseInt(hex.slice(1, 3), 16);
+        document.getElementById(gField).value = parseInt(hex.slice(3, 5), 16);
+        document.getElementById(bField).value = parseInt(hex.slice(5, 7), 16);
+    }
+}
+
 function updateColorInputs(picker, code, r, g, b) {
     picker.addEventListener('input', function () {
         code.value = picker.value;
@@ -32,7 +41,10 @@ function updateColorInputs(picker, code, r, g, b) {
     });
 
     code.addEventListener('input', function () {
-        picker.value = code.value;
+        if (!isValidHexColor(code.value)){
+            return;
+        }
+        picker.value = expandShortHex(code.value);
         let [red, green, blue] = hexToRgb(code.value);
         r.value = red;
         g.value = green;
@@ -74,6 +86,9 @@ function generateGradientText() {
     color1 = expandShortHex(color1);
     color2 = expandShortHex(color2);
 
+    updateRGBFields(color1, 'color1-r', 'color1-g', 'color1-b');
+    updateRGBFields(color2, 'color2-r', 'color2-g', 'color2-b');
+
     let gradientText = '';
     let previewText = '';
 
@@ -104,7 +119,6 @@ function copyToClipboard() {
 }
 
 document.getElementById('copyButton').addEventListener('click', copyToClipboard);
-
 
 document.getElementById('inputText').addEventListener('input', generateGradientText);
 
