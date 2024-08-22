@@ -20,7 +20,7 @@ h1{
     margin-bottom: 20px;
 }
 .color-picker-container > div {
-    margin: 0 50px;
+    margin: 0 5%;
 }
 #output {
     margin-top: 20px;
@@ -40,6 +40,7 @@ h1{
 button{
     padding:  5px 10px;
     border-color: #aaa;
+    color: #000;
 }
 #preview {
     margin-top: 20px;
