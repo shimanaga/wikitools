@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+h1{
+    text-align: center;
+}
+.color-picker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.color-picker input{
+    margin-bottom: 10px;
+}
+.color-picker-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.color-picker-container > div {
+    margin: 0 50px;
+}
+#output {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+.text-input {
+    margin-bottom: 20px;
+}
+.text-input input{
+    position: relative;
+    top: -2px;
+}
+#button{
+    text-align: center;
+}
+button{
+    padding:  5px 10px;
+    border-color: #aaa;
+}
+#preview {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}

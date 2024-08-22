@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>wikitools - グラデーション</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <h1>グラデーションかけるよ</h1>
+    <div class="text-input">
+        <label for="inputText">文字列を入力してください：</label>
+        <input type="text" id="inputText">
+    </div>
+    <div class="color-picker-container">
+        <div class="color-picker">
+            <h3>色1</h3>
+            <input type="color" id="color1-picker">
+            <label for="color1-code">カラーコード</label>
+            <input type="text" id="color1-code" value="#000000">
+            <label for="color1-r">RGB</label>
+            <input type="number" id="color1-r" min="0" max="255" value="0">
+            <input type="number" id="color1-g" min="0" max="255" value="0">
+            <input type="number" id="color1-b" min="0" max="255" value="0">
+        </div>
+        <div class="color-picker">
+            <h3>色2</h3>
+            <input type="color" id="color2-picker">
+            <label for="color2-code">カラーコード</label>
+            <input type="text" id="color2-code" value="#000000">
+            <label for="color2-r">RGB</label>
+            <input type="number" id="color2-r" min="0" max="255" value="0">
+            <input type="number" id="color2-g" min="0" max="255" value="0">
+            <input type="number" id="color2-b" min="0" max="255" value="0">
+        </div>
+    </div>
+    <div id="button">
+        <button id="copyButton">コピー</button>
+    </div>
+    <div id="preview"></div>
+    <div id="output"></div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
