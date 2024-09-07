@@ -73,7 +73,7 @@ function updateColorInputs(picker, code, r, g, b) {
 }
 
 function generateGradientText() {
-    const text = document.getElementById('inputText').value;
+    const text = Array.from(document.getElementById('inputText').value);
     let color1 = document.getElementById('color1-code').value;
     let color2 = document.getElementById('color2-code').value;
     const output = document.getElementById('output');
